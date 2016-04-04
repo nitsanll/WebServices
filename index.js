@@ -30,7 +30,7 @@ http.createServer(function(req,res){
     myHotel_2.removeStar();
     myHotel_2.addStar();
     myHotel_2.addStar();
-
+    
     res.end(myHotel_1.printObj + myHotel_2.printObj);
 }).listen(8080,'127.0.0.1');
 

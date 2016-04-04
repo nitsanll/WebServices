@@ -1,0 +1,19 @@
+{
+  "name": "exercise0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitsanll/WebServices.git"
+  },
+  "author": "nitsan levin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitsanll/WebServices/issues"
+  },
+  "homepage": "https://github.com/nitsanll/WebServices#readme"
+}
