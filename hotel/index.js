@@ -53,9 +53,9 @@ module.exports = class Hotel extends events
         }
         else 
         {
-            var str2 = `star has been removed!`;
-            console.log(`${str2}`);
-            this.printObj.push(str2); 
+            var str = `star has been removed!`;
+            console.log(`${str}`);
+            this.printObj.push(str); 
             this.printObj.push(`\n`);
         }  
     }

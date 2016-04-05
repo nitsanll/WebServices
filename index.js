@@ -36,11 +36,11 @@ http.createServer(function(req,res){
     myHotel_2.addStar();
     
     //get messages object and put it in a string
-    var strPrint = myHotel_1.getPrintObjStr();
-    strPrint+= myHotel_2.getPrintObjStr();
+    var printStr = myHotel_1.getPrintObjStr();
+    printStr+= myHotel_2.getPrintObjStr();
 
     //send messages object to browser
-    res.end(`${strPrint}`);
+    res.end(`${printStr}`);
 }).listen(8080,`127.0.0.1`);
 
 console.log(`listening on port 8080\n`);
