@@ -26,7 +26,7 @@ module.exports = class Hotel extends events
         console.log(``);
         for(var i=0; i<4; i++)  
         {
-            this.printObj.push(`${strArr[i]}`);
+            this.printObj.push(strArr[i]);
             this.printObj.push(`\n`);
         }
     }
@@ -65,5 +65,16 @@ module.exports = class Hotel extends events
         console.log(`${str}`);
         this.printObj.push(str);
         this.printObj.push(`\n`);
+    }
+    getPrintObjStr()        //returns messages object
+    {
+        var str = "";
+        var index;
+        var arr = this.printObj;
+        for (index = 0; index < arr.length; index++) 
+        {
+            str += arr[index];
+        }
+        return str;
     }
 }
