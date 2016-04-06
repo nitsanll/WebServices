@@ -3,6 +3,7 @@
 var events = require('events');
 var hotel = require('./hotel');
 var http = require('http');
+var eventsConfig = require('./config').events;
 
 http.createServer(function(req,res){
     res.writeHeader(200);
@@ -13,15 +14,15 @@ http.createServer(function(req,res){
     var myHotel_2 = new hotel('Moria', 'spa', 3);
 
     //callback functions
-    myHotel_1.on("starAdded", myHotel_1.displayAdd);
-    myHotel_1.on("starAdded", myHotel_1.displayHotel);
-    myHotel_1.on("starRemoved", myHotel_1.checkZero);
-    myHotel_1.on("starRemoved", myHotel_1.displayHotel);
+    myHotel_1.on(eventsConfig.ADDSTAR, myHotel_1.displayAdd);
+    myHotel_1.on(eventsConfig.ADDSTAR, myHotel_1.displayHotel);
+    myHotel_1.on(eventsConfig.REMSTAR, myHotel_1.checkZero);
+    myHotel_1.on(eventsConfig.REMSTAR, myHotel_1.displayHotel);
 
-    myHotel_2.on("starAdded", myHotel_2.displayAdd);
-    myHotel_2.on("starAdded", myHotel_2.displayHotel);
-    myHotel_2.on("starRemoved", myHotel_2.checkZero);
-    myHotel_2.on("starRemoved", myHotel_2.displayHotel);
+    myHotel_2.on(eventsConfig.ADDSTAR, myHotel_2.displayAdd);
+    myHotel_2.on(eventsConfig.ADDSTAR, myHotel_2.displayHotel);
+    myHotel_2.on(eventsConfig.REMSTAR, myHotel_2.checkZero);
+    myHotel_2.on(eventsConfig.REMSTAR, myHotel_2.displayHotel);
 
     //functions demo
     myHotel_1.removeStar();

@@ -1,7 +1,6 @@
 'use strict';
 
 var events = require('events');
-var utils = require('util');
 
 module.exports = class Hotel extends events 
 {
